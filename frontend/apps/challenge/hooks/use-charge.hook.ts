@@ -14,17 +14,6 @@ gql`
 export const useCharge = () => {
   const [chargeMutation, { error, loading }] = usePaymentChargeMutation();
 
-  const charge = useCallback((input: PaymentChargeInput) => {
-    return chargeMutation({
-      variables: { input },
-    }).then(function (response) {
-      if (response.data?.paymentCharge === false) {
-        throw new Error();
-      } else {
-        return response;
-      }
-    });
-  }, []);
-
+  
   return { error, loading, charge };
 };
