@@ -107,10 +107,10 @@ export class Migration20220112180941 extends Migration {
     this.addSql('alter table "service_provider_messages" add constraint "service_provider_messages_connection_id_foreign" foreign key ("connection_id") references "service_provider_connections" ("id") on update cascade;');
     this.addSql('alter table "service_provider_messages" add constraint "service_provider_messages_thread_id_foreign" foreign key ("thread_id") references "service_provider_threads" ("id") on update cascade;');
 
-    this.addSql('alter table "service_provider_thread_moves" add constraint "service_provider_thread_moves_connection_id_foreign" foreign key ("connection_id") references "service_provider_connections" ("id") on update cascade;');
+/*    this.addSql('alter table "service_provider_thread_moves" add constraint "service_provider_thread_moves_connection_id_foreign" foreign key ("connection_id") references "service_provider_connections" ("id") on update cascade;');
     this.addSql('alter table "service_provider_thread_moves" add constraint "service_provider_thread_moves_thread_id_foreign" foreign key ("thread_id") references "service_provider_threads" ("id") on update cascade;');
 
-    this.addSql('alter table "service_provider_connection_syncs" add constraint "service_provider_connection_syncs_connection_id_foreign" foreign key ("connection_id") references "service_provider_connections" ("id") on update cascade;');
+    this.addSql('alter table "service_provider_connection_syncs" add constraint "service_provider_connection_syncs_connection_id_foreign" foreign key ("connection_id") references "service_provider_connections" ("id") on update cascade;');*/
   }
 
 }
